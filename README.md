@@ -5,8 +5,12 @@ In subcohort 1 (N=2,481), protein levels were log transformed and adjusted for a
 
 For developed protein prediction models with prediction performance (R ^2^ ) of at least 0.01, we further conducted external validation using subcohort 2 (N=820) data.
 
-
-
+# get potential SNP predictors
+GWAS_using_plink_cis_trans.py
+extract_cis_trans_potential_predictors.py
+# establish models
+build_model_parallel.py
+# association
 example codes:
 Rscript FUSION.assoc_test.R --sumstats Alzheimer_GWAS_summary_example.txt --weights_dir models/ --weights pos_file/ATP1A1.11993.227.3.pos --ref_ld_chr LD_reference/ATP1A1.11993.227.3.ld.1000g. --chr Z --out ATP1A1.11993.227.3_on_AD_association.txt
 
